@@ -31,7 +31,7 @@ namespace ClassLibTeam03.Data.Repositories
 
             if (!result.Succeeded)
             {
-                throw new Exception("Failed to retrieve users: " + string.Join(", ", result.Errors));
+                throw new Exception("Failed to retrieve routes: " + string.Join(", ", result.Errors));
             }
 
             return ConvertDataTableToBoulderRoutes(result.DataTable);

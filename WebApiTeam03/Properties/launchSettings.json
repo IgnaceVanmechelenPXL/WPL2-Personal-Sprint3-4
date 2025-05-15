@@ -3,6 +3,8 @@
     "WebApiTeam03": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "swagger",
+      "dotnetRunMessages": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

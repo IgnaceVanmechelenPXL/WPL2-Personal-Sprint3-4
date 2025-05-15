@@ -10,7 +10,7 @@ namespace ClassLibTeam03.Data.Framework
     {
         public static string GetConnectionString()
         {
-            string connectionString = @"Data Source = 5CD421FF2K\SQLEXPRESS; Initial Catalog = DB_Personal_MAUI_Ignace_Vanmechelen; Integrated Security = True; Trust Server Certificate = True";
+            string connectionString = @"Data Source = 5CD421FF2K\SQLEXPRESS; Initial Catalog = DB_Personal_MAUI_Ignace_Vanmechelen; Integrated Security=True;";
             return connectionString;
         }
     }
