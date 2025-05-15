@@ -17,11 +17,11 @@
                 <StackPanel HorizontalAlignment="Center">
                     <WrapPanel>
                         <Label Content="Server:" Width="100"></Label>
-                        <TextBox Name="serverTextBox" Width="200" Margin="5" Text="10.128.4.7"></TextBox>
+                    <TextBox Name="serverTextBox" Width="200" Margin="5" Text="5CD421FF2K\SQLEXPRESS"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
                         <Label Content="Database:" Width="100"></Label>
-                        <TextBox Name="dataBaseTextBox" Width="200" Margin="5" Text="Db2025Team_03"></TextBox>
+                    <TextBox Name="dataBaseTextBox" Width="200" Margin="5" Text="DB_Personal_MAUI_Ignace_Vanmechelen"></TextBox>
                     </WrapPanel>
                     <Button x:Name="connectButton" Content="Connect" Width="100" Click="connectButton_Click"></Button>
                     <WrapPanel>

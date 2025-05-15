@@ -41,16 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Entities\ClassRoom.cs" />
-    <Compile Include="Business\Entities\Enrollment.cs" />
+    <Compile Include="Business\BoulderRoutes.cs" />
+    <Compile Include="Business\Entities\BoulderRoute.cs" />
     <Compile Include="Business\Entities\Student.cs" />
     <Compile Include="Business\Students.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Data\BoulderRouteData.cs" />
+    <Compile Include="Data\Framework\BaseResult.cs" />
+    <Compile Include="Data\Framework\InsertResult.cs" />
+    <Compile Include="Data\Framework\SelectResult.cs" />
+    <Compile Include="Data\Framework\Settings.cs" />
+    <Compile Include="Data\Framework\SqlServer.cs" />
+    <Compile Include="Data\Framework\UpdateResult.cs" />
+    <Compile Include="Data\Repositories\BoulderRouteRepository.cs" />
     <Compile Include="Data\Repositories\StudentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\Framework\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
