@@ -13,6 +13,7 @@
         {
             var routes = await RestService.GetBoulderRoutesAsync();
             boulderRoutesListView.ItemsSource = routes;
+            loadRoutesButton.IsVisible = false;
         }
     }
 }

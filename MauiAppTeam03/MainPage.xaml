@@ -7,17 +7,6 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
-
-            <Label
-                Text="Welkom in mijn MAUI app"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
             <Button
                 x:Name="loadRoutesButton"
                 Text="Load boulder routes" 
@@ -25,23 +14,32 @@
                 Clicked="LoadRoutes"
                 HorizontalOptions="Fill" />
 
-            <ListView x:Name="boulderRoutesListView" Header="Boulder Routes">
+            <ListView x:Name="boulderRoutesListView" Header="Boulder Routes" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18"/>
-                                <Label Text="Grade:" FontAttributes="Bold" FontSize="14"/>
-                                <Label Text="{Binding FontScale}" FontSize="14"/>
+                            <StackLayout Spacing="20" Margin="10" Padding="10">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" />
 
-                                <Label Text="Country:" FontAttributes="Bold" FontSize="14"/>
-                                <Label Text="{Binding Country}" FontSize="14"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Grade: " FontAttributes="Bold" FontSize="14" />
+                                    <Label Text="{Binding FontScale}" FontSize="14" />
+                                </StackLayout>
 
-                                <Label Text="Style:" FontAttributes="Bold" FontSize="14"/>
-                                <Label Text="{Binding ClimbingStyle}" FontSize="14"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Country: " FontAttributes="Bold" FontSize="14" />
+                                    <Label Text="{Binding Country}" FontSize="14" />
+                                </StackLayout>
 
-                                <Label Text="First Ascent:" FontAttributes="Bold" FontSize="14"/>
-                                <Label Text="{Binding DateFirstAscent, StringFormat='{0:dd MMM yyyy}'}" FontSize="14"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Style: " FontAttributes="Bold" FontSize="14" />
+                                    <Label Text="{Binding ClimbingStyle}" FontSize="14" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="First Ascent: " FontAttributes="Bold" FontSize="14" />
+                                    <Label Text="{Binding DateFirstAscent, StringFormat='{0:dd MMM yyyy}'}" FontSize="14" />
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
