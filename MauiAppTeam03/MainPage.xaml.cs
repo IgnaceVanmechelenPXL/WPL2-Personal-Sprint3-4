@@ -9,9 +9,10 @@
             InitializeComponent();
         }
 
-        private void LoadRoutes(object sender, EventArgs e)
+        private async void LoadRoutes(object sender, EventArgs e)
         {
-
+            var routes = await RestService.GetBoulderRoutesAsync();
+            boulderRoutesListView.ItemsSource = routes;
         }
     }
 }
