@@ -19,10 +19,10 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="loadRoutesButton"
+                Text="Load boulder routes" 
+                SemanticProperties.Hint="Loads the list of boulder routes below"
+                Clicked="LoadRoutes"
                 HorizontalOptions="Fill" />
 
             <ListView x:Name="boulderRoutesListView" Header="Boulder Routes">
