@@ -18,29 +18,41 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Spacing="20" Margin="10" Padding="10">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" />
+                            <Border Margin="10" Padding="10">
+                                <Grid ColumnDefinitions="*, Auto" RowSpacing="10">
+                                    <StackLayout Grid.Column="0" Spacing="8">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" />
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Grade: " FontAttributes="Bold" FontSize="14" />
-                                    <Label Text="{Binding FontScale}" FontSize="14" />
-                                </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Grade: " FontAttributes="Bold" FontSize="14" />
+                                            <Label Text="{Binding FontScale}" FontSize="14" />
+                                        </StackLayout>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Country: " FontAttributes="Bold" FontSize="14" />
-                                    <Label Text="{Binding Country}" FontSize="14" />
-                                </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Country: " FontAttributes="Bold" FontSize="14" />
+                                            <Label Text="{Binding Country}" FontSize="14" />
+                                        </StackLayout>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Style: " FontAttributes="Bold" FontSize="14" />
-                                    <Label Text="{Binding ClimbingStyle}" FontSize="14" />
-                                </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Style: " FontAttributes="Bold" FontSize="14" />
+                                            <Label Text="{Binding ClimbingStyle}" FontSize="14" />
+                                        </StackLayout>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="First Ascent: " FontAttributes="Bold" FontSize="14" />
-                                    <Label Text="{Binding DateFirstAscent, StringFormat='{0:dd MMM yyyy}'}" FontSize="14" />
-                                </StackLayout>
-                            </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="First Ascent: " FontAttributes="Bold" FontSize="14" />
+                                            <Label Text="{Binding DateFirstAscent, StringFormat='{0:dd MMM yyyy}'}" FontSize="14" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Image Grid.Column="1"
+                                       Source="{Binding ImageUrl}"
+                                       WidthRequest="100"
+                                       HeightRequest="100"
+                                       Aspect="AspectFill"
+                                       Margin="10,0,0,0"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End" />
+                                </Grid>
+                            </Border>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
