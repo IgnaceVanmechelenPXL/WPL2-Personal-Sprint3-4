@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:entities="clr-namespace:ClassLibTeam03.Business.Entities;assembly=ClassLibTeam03"
              x:Class="MauiAppTeam03.MainPage">
 
     <ScrollView>
@@ -16,7 +17,7 @@
 
             <ListView x:Name="boulderRoutesListView" Header="Boulder Routes" HasUnevenRows="True">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="entities:BoulderRoute">
                         <ViewCell>
                             <Border Margin="10" Padding="10">
                                 <Grid ColumnDefinitions="*, Auto" RowSpacing="10">

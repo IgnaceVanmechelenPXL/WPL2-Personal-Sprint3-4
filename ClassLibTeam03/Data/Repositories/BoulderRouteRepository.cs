@@ -54,6 +54,7 @@ namespace ClassLibTeam03.Data.Repositories
                     DateFirstAscent = row.Field<DateTime>("DateFirstAscent"),
                     CreatedAt = row.Field<DateTime?>("CreatedAt"),
                     UpdatedAt = row.Field< DateTime ?> ("UpdatedAt"),
+                    ImageUrl = row.Field<string>("ImageUrl")
                 });
             }
             return routes;

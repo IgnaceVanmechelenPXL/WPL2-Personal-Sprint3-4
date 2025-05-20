@@ -38,8 +38,8 @@ namespace ClassLibTeam03.Data
             {
                 StringBuilder insertQuery = new StringBuilder();
                 insertQuery.Append($"INSERT INTO {TableName} ");
-                insertQuery.Append($"(Name, FontScale, Country, ClimbingStyle, Description, DateFirstAscent, CreatedAt, UpdatedAt) VALUES ");
-                insertQuery.Append($"(@Name, @FontScale, @Country, @ClimbingStyle, @Description, @DateFirstAscent, @CreatedAt, @UpdatedAt);");
+                insertQuery.Append($"(Name, FontScale, Country, ClimbingStyle, Description, DateFirstAscent, CreatedAt, UpdatedAt, ImageUrl) VALUES ");
+                insertQuery.Append($"(@Name, @FontScale, @Country, @ClimbingStyle, @Description, @DateFirstAscent, @CreatedAt, @UpdatedAt, @ImageUrl);");
 
                 using (SqlCommand insertCommand = new SqlCommand(insertQuery.ToString()))
                 {
@@ -51,6 +51,7 @@ namespace ClassLibTeam03.Data
                     insertCommand.Parameters.Add("@DateFirstAscent", SqlDbType.DateTime).Value = route.DateFirstAscent;
                     insertCommand.Parameters.Add("@CreatedAt", SqlDbType.VarChar).Value = route.CreatedAt;
                     insertCommand.Parameters.Add("@UpdatedAt", SqlDbType.VarChar).Value = route.UpdatedAt;
+                    insertCommand.Parameters.Add("@ImageUrl", SqlDbType.VarChar).Value = route.ImageUrl;
 
 
                     result = InsertRecord(insertCommand);
